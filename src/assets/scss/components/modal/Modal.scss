@@ -1,0 +1,82 @@
+.backdrop {
+  position: fixed;
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  overflow-x: hidden;
+  background-color: rgba(31, 32, 41, 0.75);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms 700ms ease;
+}
+
+.backdrop.visible {
+  pointer-events: auto;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.modal {
+  position: relative;
+  display: block;
+  width: 30rem;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  align-self: center;
+  box-shadow: 0 12px 25px 0 rgba(199, 175, 189, 0.25);
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 250ms 250ms ease, transform 300ms 250ms ease;
+  transform: scale(0);
+  align-items: center;
+
+  p {
+    padding: 1rem;
+  }
+}
+
+.visible .modal {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 250ms 500ms ease, transform 350ms 500ms ease;
+}
+
+.btn-wrapper {
+  text-align: right;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #800040;
+  color: white;
+  border: 1px solid #800040;
+  margin: 0 1rem;
+
+  &:hover {
+    background-color: #9c1458;
+    border-color: #9c1458;
+  }
+}
+
+.btn--alt {
+  background-color: transparent;
+  color: #800040;
+
+  &:hover {
+    background-color: #f8dae9;
+  }
+}

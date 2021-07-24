@@ -15,17 +15,19 @@ const App = () => {
   return (
     <div>
       <MainNavigation />
-      <Switch>
-        <Route path="/" exact>
-          <AllMeetupsPage />
-        </Route>
-        <Route path="/new-meetup">
-          <NewMeetupPage />
-        </Route>
-        <Route path="/favorites">
-          <FavoritesPage />
-        </Route>
-      </Switch>
+      <div className="page-wrapper">
+        <Switch>
+          <Route path="/" exact>
+            <AllMeetupsPage />
+          </Route>
+          <Route path="/new-meetup">
+            <NewMeetupPage />
+          </Route>
+          <Route path="/favorites">
+            <FavoritesPage />
+          </Route>
+        </Switch>
+      </div>
     </div>
   )
 }
