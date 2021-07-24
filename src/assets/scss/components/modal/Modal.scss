@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .backdrop {
   position: fixed;
   display: block;
@@ -61,22 +63,22 @@
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   border-radius: 4px;
-  background-color: #800040;
+  background-color: $primary-color;
   color: white;
-  border: 1px solid #800040;
+  border: 1px solid $primary-color;
   margin: 0 1rem;
 
   &:hover {
-    background-color: #9c1458;
-    border-color: #9c1458;
+    background-color: $active-color;
+    border-color: $active-color;
   }
 }
 
 .btn--alt {
   background-color: transparent;
-  color: #800040;
+  color: $primary-color;
 
   &:hover {
-    background-color: #f8dae9;
+    background-color: #e6f4ff;
   }
 }
